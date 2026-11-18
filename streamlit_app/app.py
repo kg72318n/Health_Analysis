@@ -7,7 +7,7 @@ if "GOOGLE_API_KEY" not in os.environ and "GOOGLE_API_KEY" in st.secrets:
 
 st.set_page_config(page_title="Blood Work Analyzer", layout="wide")
 
-llm = ChatGoogleGenerativeAI(model="gemma-4-31b-it")
+# llm = ChatGoogleGenerativeAI(model="gemma-4-31b-it")
 
 st.markdown("""
 <style>
