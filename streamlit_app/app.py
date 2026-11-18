@@ -1,8 +1,6 @@
 import os
 import streamlit as st
-from dotenv import load_dotenv
 
-load_dotenv()
 
 if "GOOGLE_API_KEY" not in os.environ and "GOOGLE_API_KEY" in st.secrets:
     os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
