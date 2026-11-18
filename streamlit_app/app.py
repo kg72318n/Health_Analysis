@@ -1,13 +1,13 @@
-import os
 import streamlit as st
+from langchain_google_genai import ChatGoogleGenerativeAI
 
-
-if "GOOGLE_API_KEY" not in os.environ and "GOOGLE_API_KEY" in st.secrets:
-    os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
-
+llm = ChatGoogleGenerativeAI(
+    model="gemini-3.8-flash",
+    google_api_key=st.secrets["GOOGLE_API_KEY"]
+)
 st.set_page_config(page_title="Blood Work Analyzer", layout="wide")
 
-# llm = ChatGoogleGenerativeAI(model="gemma-4-31b-it")
+llm = ChatGoogleGenerativeAI(model="gemma-4-31b-it")
 
 st.markdown("""
 <style>
